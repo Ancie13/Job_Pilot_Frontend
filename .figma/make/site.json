@@ -1,0 +1,10 @@
+{
+  "description": "Manage your job search in one place with AI-powered job matching, application tracking, profile and document tools, and automation.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

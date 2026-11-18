@@ -1,0 +1,217 @@
+/* Applications */
+.application-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14.4px;
+  margin-bottom: 22.8px;
+}
+.application-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 13.2px;
+  padding: 16.8px;
+}
+.application-stats .dot {
+  width: 10.8px;
+  height: 10.8px;
+}
+.application-stats > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.application-stats strong {
+  font: 700 21.6px "Manrope";
+}
+.application-stats span {
+  color: var(--muted);
+  font-size: 10.8px;
+}
+.view-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.segmented {
+  display: flex;
+  padding: 3.6px;
+  background: var(--surface);
+  border: 1.2px solid var(--border);
+  border-radius: 9.6px;
+}
+.segmented button {
+  display: flex;
+  align-items: center;
+  gap: 7.2px;
+  padding: 8.4px 12px;
+  color: var(--muted);
+  background: 0;
+  border: 0;
+  border-radius: 7.2px;
+  font-size: 10.8px;
+}
+.segmented button.active {
+  color: white;
+  background: #27232f;
+}
+.view-toolbar > div:last-child {
+  display: flex;
+  gap: 8.4px;
+}
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 13.2px;
+  overflow-x: auto;
+}
+.kanban-col {
+  min-width: 0;
+  padding: 0 8.4px 9.6px;
+  background: rgba(17, 16, 22, 0.55);
+  border: 1.2px solid var(--border-soft);
+  border-radius: 13.2px;
+}
+.kanban-col > header {
+  display: flex;
+  align-items: center;
+  gap: 8.4px;
+  padding: 15.6px 6px;
+  font-size: 12px;
+}
+.kanban-col header span {
+  display: flex;
+  align-items: center;
+  gap: 7.2px;
+  flex: 1;
+  font-weight: 600;
+}
+.kanban-col header em {
+  display: grid;
+  place-items: center;
+  width: 21.6px;
+  height: 21.6px;
+  color: var(--muted);
+  background: #25222c;
+  border-radius: 50%;
+  font-size: 9.6px;
+  font-style: normal;
+}
+.kanban-col header button,
+.app-top button {
+  padding: 0;
+  color: var(--muted-2);
+  background: 0;
+  border: 0;
+}
+.app-card {
+  padding: 15.6px;
+  margin-bottom: 9.6px;
+}
+.app-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.app-top .company-logo {
+  width: 37.2px;
+  height: 37.2px;
+  font-size: 14.4px;
+}
+.app-card h3 {
+  margin-top: 13.2px;
+  font-size: 12px;
+}
+.app-card > p {
+  margin-top: 3.6px;
+  color: var(--muted);
+  font-size: 10.8px;
+}
+.app-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15.6px;
+  padding-top: 12px;
+  border-top: 1.2px solid var(--border-soft);
+}
+.app-meta > span {
+  display: flex;
+  align-items: center;
+  gap: 4.8px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
+.app-meta svg {
+  width: 13.2px;
+}
+.next-step {
+  display: flex;
+  gap: 7.2px;
+  margin-top: 10.8px;
+  padding: 9.6px;
+  color: var(--orange);
+  background: rgba(247, 164, 87, 0.08);
+  border-radius: 7.2px;
+}
+.next-step span {
+  display: flex;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 8.4px;
+}
+.next-step b {
+  color: #e0aa75;
+  font-size: 9.6px;
+}
+.add-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10.8px;
+  color: var(--muted-2);
+  background: transparent;
+  border: 1.2px dashed var(--border);
+  border-radius: 9.6px;
+  font-size: 9.6px;
+}
+.applications-table {
+  overflow-x: auto;
+}
+.applications-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.applications-table th {
+  padding: 14.4px 19.2px;
+  color: var(--muted-2);
+  font-size: 9.6px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.applications-table td {
+  padding: 15.6px 19.2px;
+  border-top: 1.2px solid var(--border-soft);
+  color: var(--muted);
+  font-size: 10.8px;
+}
+.applications-table td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10.8px;
+  color: var(--text);
+}
+.applications-table .company-logo {
+  width: 38.4px;
+  height: 38.4px;
+  font-size: 14.4px;
+}
+.applications-table td span {
+  display: flex;
+  flex-direction: column;
+}
+.applications-table td small {
+  margin-top: 3.6px;
+  color: var(--muted);
+  font-size: 9.6px;
+}

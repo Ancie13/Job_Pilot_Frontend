@@ -1,0 +1,198 @@
+/* Documents */
+.upload-cv-button { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; }
+.upload-cv-button input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.resume-extracted-text { max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--muted); }
+.doc-tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 21.6px;
+  border-bottom: 1.2px solid var(--border-soft);
+}
+.doc-tabs button {
+  position: relative;
+  padding: 0 1.2px 14.4px;
+  color: var(--muted);
+  background: 0;
+  border: 0;
+  font-size: 12px;
+}
+.doc-tabs button.active {
+  color: white;
+}
+.doc-tabs button.active:after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1.2px;
+  height: 2.4px;
+  background: var(--purple);
+}
+.doc-tabs span {
+  margin-left: 7.2px;
+  padding: 1.2px 6px;
+  background: #28242f;
+  border-radius: 9.6px;
+  color: var(--muted);
+  font-size: 8.4px;
+}
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15.6px;
+}
+.new-document {
+  min-height: 331.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--muted);
+  background: rgba(17, 16, 22, 0.4);
+  border: 1.2px dashed #393440;
+  border-radius: 14.4px;
+}
+.new-document > span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 13.2px;
+  color: var(--purple-2);
+  background: var(--purple-soft);
+  border-radius: 12px;
+}
+.new-document b {
+  color: #d2ccd8;
+  font-size: 12px;
+}
+.new-document p {
+  margin-top: 6px;
+  font-size: 9.6px;
+}
+.document-card {
+  position: relative;
+  overflow: hidden;
+}
+.paper-preview {
+  position: relative;
+  height: 223.2px;
+  margin: 14.4px 14.4px 0;
+  padding: 22.8px;
+  background: #e9e7e4;
+  border-radius: 6px 6px 0 0;
+}
+.paper-preview:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 90%, rgba(0, 0, 0, 0.08));
+}
+.paper-head {
+  display: grid;
+  grid-template-columns: 33.6px 1fr;
+  grid-template-rows: 8.4px 6px;
+  gap: 4.8px 8.4px;
+  margin-bottom: 16.8px;
+}
+.paper-head i {
+  grid-row: 1/3;
+  width: 32.4px;
+  height: 32.4px;
+  background: #393343;
+  border-radius: 50%;
+}
+.paper-head span {
+  background: #7a747b;
+  border-radius: 2.4px;
+}
+.paper-head span:last-child {
+  width: 60%;
+  background: #aaa5a8;
+}
+.paper-preview > b,
+.paper-preview > p {
+  display: block;
+  height: 4.8px;
+  margin: 9.6px 0;
+  background: #555157;
+  border-radius: 2.4px;
+}
+.paper-preview > p {
+  height: 3.6px;
+  background: #aaa5a8;
+}
+.paper-preview > p:nth-of-type(2) {
+  width: 72%;
+}
+.document-hover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  background: rgba(20, 17, 26, 0.72);
+  transition: 0.2s;
+}
+.paper-preview:hover .document-hover {
+  opacity: 1;
+}
+.document-hover button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9.6px 14.4px;
+  color: white;
+  background: var(--purple);
+  border: 0;
+  border-radius: 8.4px;
+  font-size: 10.8px;
+}
+.document-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 15.6px;
+}
+.document-info h3 {
+  font-size: 10.8px;
+}
+.document-info p,
+.document-info > span {
+  margin-top: 3.6px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
+.document-info button {
+  padding: 0;
+  color: var(--muted);
+  background: 0;
+  border: 0;
+}
+.document-info .ai-badge {
+  margin-top: 8.4px;
+}
+.document-card > .pill {
+  position: absolute;
+  top: 21.6px;
+  right: 21.6px;
+}
+.doc-ai-banner {
+  display: flex;
+  align-items: center;
+  gap: 16.8px;
+  margin-top: 21.6px;
+  padding: 21.6px;
+  background:
+    radial-gradient(circle at 10% 0, rgba(139, 92, 246, 0.15), transparent 34%), var(--surface);
+}
+.doc-ai-banner > div:nth-child(2) {
+  flex: 1;
+}
+.doc-ai-banner h3 {
+  margin-top: 4.8px;
+  font: 650 15.6px "Manrope";
+}
+.doc-ai-banner p {
+  margin-top: 4.8px;
+  color: var(--muted);
+  font-size: 10.8px;
+}

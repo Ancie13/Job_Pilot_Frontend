@@ -1,0 +1,294 @@
+/* Dashboard */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16.8px;
+  margin-bottom: 16.8px;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15.6px;
+  padding: 19.2px;
+}
+.stat-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.stat-icon.purple {
+  color: #aa8bfb;
+  background: rgba(139, 92, 246, 0.12);
+}
+.stat-icon.blue {
+  color: #79b2fb;
+  background: rgba(100, 167, 255, 0.11);
+}
+.stat-icon.green {
+  color: #5bd4a5;
+  background: rgba(70, 207, 154, 0.1);
+}
+.stat-icon.orange {
+  color: #f5ad69;
+  background: rgba(247, 164, 87, 0.1);
+}
+.stat-card > div:last-child {
+  display: grid;
+  flex: 1;
+  grid-template: auto auto / 1fr auto;
+}
+.stat-card span {
+  color: var(--muted);
+  font-size: 10.8px;
+}
+.stat-card strong {
+  grid-row: 2;
+  font: 700 26.4px "Manrope";
+}
+.stat-card small {
+  grid-row: 2;
+  align-self: end;
+  justify-self: end;
+  margin-bottom: 3.6px;
+  color: var(--green);
+  font-size: 9.6px;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(312px, 0.85fr);
+  gap: 16.8px;
+}
+.activity-card {
+  min-height: 348px;
+}
+.chart-wrap {
+  display: flex;
+  height: 258px;
+  padding: 4.8px 24px 21.6px;
+}
+.chart-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 12px 22.8px 0;
+  color: var(--muted-2);
+  font-size: 9.6px;
+}
+.chart {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.chart-grid {
+  position: absolute;
+  inset: 0 0 22.8px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(33.333% - 1.2px),
+    var(--border-soft) 33.333%
+  );
+}
+.chart svg {
+  position: absolute;
+  inset: 0 0 24px;
+  width: 100%;
+  height: calc(100% - 24px);
+  overflow: visible;
+}
+.chart .area {
+  fill: url(#fill);
+  stroke: none;
+}
+.chart .line {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 2.2;
+  vector-effect: non-scaling-stroke;
+}
+.chart circle {
+  fill: var(--purple);
+  stroke: #c8b7ff;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.chart-x {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted-2);
+  font-size: 9.6px;
+}
+.pipeline {
+  padding: 2.4px 24px 24px;
+}
+.pipeline > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 19.2px;
+}
+.pipeline span {
+  display: flex;
+  align-items: center;
+  gap: 8.4px;
+  color: #b7b2bd;
+  font-size: 12px;
+}
+.pipeline span i,
+.kanban-col header i,
+.application-stats .dot {
+  width: 8.4px;
+  height: 8.4px;
+  background: var(--purple);
+  border-radius: 50%;
+}
+.pipeline span i.blue,
+.kanban-col .c1,
+.application-stats .c1 {
+  background: var(--blue);
+}
+.pipeline span i.orange,
+.kanban-col .c2,
+.application-stats .c2 {
+  background: var(--orange);
+}
+.pipeline span i.green,
+.kanban-col .c3,
+.application-stats .c3 {
+  background: var(--green);
+}
+.pipeline b {
+  font-size: 13.2px;
+}
+.pipeline em {
+  grid-column: 1/-1;
+  height: 4.8px;
+  margin-top: 9.6px;
+  overflow: hidden;
+  background: #25222d;
+  border-radius: 4.8px;
+}
+.pipeline em i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #7042da, #a37df8);
+  border-radius: 4.8px;
+}
+.recommended {
+  min-height: 312px;
+}
+.job-rows {
+  padding: 0 10.8px 10.8px;
+}
+.job-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13.2px;
+  padding: 14.4px;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  border-top: 1.2px solid var(--border-soft);
+  text-align: left;
+}
+.job-row:hover {
+  background: #16131d;
+  border-radius: 9.6px;
+}
+.company-logo {
+  width: 45.6px;
+  height: 45.6px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 10.8px;
+  font: 700 19.2px "Manrope";
+  box-shadow: inset 0 0 0 1.2px rgba(255, 255, 255, 0.15);
+}
+.job-main {
+  flex: 1;
+  min-width: 0;
+}
+.job-main h4 {
+  overflow: hidden;
+  font-size: 13.2px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.job-main p {
+  margin-top: 4.8px;
+  color: var(--muted);
+  font-size: 10.8px;
+}
+.job-main p span {
+  display: inline-block;
+  width: 2.4px;
+  height: 2.4px;
+  margin: 0 4.8px 2.4px;
+  background: var(--muted-2);
+  border-radius: 50%;
+}
+.match {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.6px;
+}
+.match b {
+  color: #c2aff9;
+  font-size: 13.2px;
+}
+.job-row > svg {
+  color: var(--muted-2);
+}
+.events {
+  min-height: 312px;
+}
+.event {
+  display: flex;
+  align-items: center;
+  gap: 13.2px;
+  padding: 15.6px 22.8px;
+  border-top: 1.2px solid var(--border-soft);
+}
+.date {
+  width: 45.6px;
+  height: 50.4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1.2px solid var(--border);
+  border-radius: 9.6px;
+}
+.date b {
+  font: 700 18px "Manrope";
+}
+.date span {
+  color: var(--muted);
+  font-size: 8.4px;
+}
+.event > div:nth-child(2) {
+  flex: 1;
+}
+.event h4 {
+  margin-top: 4.8px;
+  font-size: 12px;
+}
+.event p {
+  margin-top: 3.6px;
+  color: var(--muted);
+  font-size: 9.6px;
+}
+.event > svg {
+  color: var(--muted-2);
+}
+.dashboard-recent-list { display: grid; gap: 14px; padding: 4px 20px 20px; }
+.dashboard-recent-list > div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--border-soft); padding-bottom: 10px; }
+.dashboard-recent-list span { color: var(--muted); }

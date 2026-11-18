@@ -1,0 +1,228 @@
+/* AI chat */
+.assistant-page {
+  height: calc(100vh - 86.4px);
+  display: grid;
+  grid-template-columns: 276px 1fr;
+}
+.chat-sidebar {
+  padding: 19.2px;
+  background: #0f0e13;
+  border-right: 1.2px solid var(--border-soft);
+}
+.chat-sidebar > .primary {
+  width: 100%;
+  margin-bottom: 26.4px;
+}
+.chat-sidebar > p {
+  margin: 0 9.6px 9.6px;
+  color: var(--muted-2);
+  font-size: 9.6px;
+  font-weight: 700;
+}
+.chat-sidebar > button:not(.primary) {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 8.4px;
+  padding: 12px 10.8px;
+  color: var(--muted);
+  background: 0;
+  border: 0;
+  border-radius: 9.6px;
+  text-align: left;
+}
+.chat-sidebar > button.active {
+  color: #ded6f2;
+  background: var(--purple-soft);
+}
+.chat-sidebar > button span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 10.8px;
+}
+.chat-sidebar > button small {
+  margin-top: 4.8px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
+.chat-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 38%, rgba(139, 92, 246, 0.045), transparent 32%);
+}
+.chat-header {
+  height: 76.8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 27.6px;
+  border-bottom: 1.2px solid var(--border-soft);
+}
+.ai-orb {
+  width: 43.2px;
+  height: 43.2px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: #d3c1ff;
+  background: radial-gradient(circle at 30% 25%, #aa84ff, #7042d8 65%, #4a279b);
+  border: 1.2px solid #ac8af8;
+  border-radius: 13.2px;
+  box-shadow: 0 9.6px 26.4px rgba(139, 92, 246, 0.2);
+}
+.ai-orb.small {
+  width: 33.6px;
+  height: 33.6px;
+  border-radius: 10.8px;
+}
+.ai-orb.large {
+  width: 57.6px;
+  height: 57.6px;
+  border-radius: 15.6px;
+}
+.chat-header > div:nth-child(2) {
+  flex: 1;
+}
+.chat-header h2 {
+  font: 650 14.4px "Manrope";
+}
+.chat-header p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3.6px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
+.chat-header p i,
+.live-dot {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  background: var(--green);
+  border-radius: 50%;
+}
+.messages {
+  width: min(864px, 100%);
+  flex: 1;
+  margin: 0 auto;
+  padding: 24px 28.8px;
+  overflow: auto;
+}
+.day-divider {
+  display: flex;
+  align-items: center;
+  gap: 9.6px;
+  margin: 3.6px 0 26.4px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
+.day-divider:before,
+.day-divider:after {
+  content: "";
+  height: 1.2px;
+  flex: 1;
+  background: var(--border-soft);
+}
+.message {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.message > div:last-child {
+  max-width: 78%;
+}
+.message p {
+  padding: 14.4px 16.8px;
+  color: #c2bdc8;
+  background: var(--surface-2);
+  border: 1.2px solid var(--border);
+  border-radius: 4.8px 14.4px 14.4px 14.4px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.message.me {
+  flex-direction: row-reverse;
+}
+.message.me > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.message.me p {
+  color: #ece6fc;
+  background: #392865;
+  border-color: #533b82;
+  border-radius: 14.4px 4.8px 14.4px 14.4px;
+}
+.message .ai-badge {
+  margin-top: 8.4px;
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7.2px;
+  margin-top: 10.8px;
+}
+.suggestions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8.4px 10.8px;
+  color: #b6a4e7;
+  background: rgba(139, 92, 246, 0.06);
+  border: 1.2px solid rgba(139, 92, 246, 0.2);
+  border-radius: 8.4px;
+  font-size: 9.6px;
+}
+.suggestions svg {
+  width: 13.2px;
+}
+.composer {
+  width: min(912px, calc(100% - 48px));
+  margin: 0 auto 19.2px;
+}
+.composer > div {
+  display: flex;
+  align-items: center;
+  gap: 9.6px;
+  padding: 7.2px 7.2px 7.2px 14.4px;
+  background: #18161f;
+  border: 1.2px solid #373241;
+  border-radius: 13.2px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+.composer button {
+  padding: 0;
+  color: var(--muted);
+  background: 0;
+  border: 0;
+}
+.composer input {
+  flex: 1;
+  min-width: 0;
+  color: white;
+  background: 0;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+}
+.composer .send {
+  width: 40.8px;
+  height: 40.8px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--purple);
+  border-radius: 9.6px;
+}
+.composer > p {
+  display: flex;
+  justify-content: center;
+  gap: 4.8px;
+  margin-top: 8.4px;
+  color: var(--muted-2);
+  font-size: 8.4px;
+}
